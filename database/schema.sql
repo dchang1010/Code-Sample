@@ -8,3 +8,5 @@ CREATE TABLE sentences (
   id INT PRIMARY KEY AUTO_INCREMENT,
   sentence VARCHAR(500)
 );
+
+INSERT INTO sentences (sentence) VALUE ('muydv');

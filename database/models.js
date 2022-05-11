@@ -13,8 +13,9 @@ const models = {
   },
 
   post: (req, callback) => {
-    let { sentence } = req.body;
-    const queryStr = `INSERT INTO sentences(sentence) VALUES ('${sentence}')`;
+    let { input } = req.body;
+    console.log(req.body.input)
+    const queryStr = `INSERT INTO sentences(sentence) VALUES ('${input}')`;
     db.query(queryStr, (err, data) => {
       if (err) {
         callback(err);

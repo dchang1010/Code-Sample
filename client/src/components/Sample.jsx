@@ -9,7 +9,7 @@ export default function Sample() {
   const handleChange = (e) => {
     setSentence({
       [e.target.name]: e.target.value
-    }, console.log(e.target.value));
+    });
   }
 
   const handleSubmit = () => {
@@ -23,9 +23,7 @@ export default function Sample() {
   useEffect (() => {
     axios.get('/api/test')
       .then((response) => {
-        console.log(response.data, 'before')
         setList(response.data)
-        console.log(list, 'after')
       })
       .catch((err) => {
         console.error(err);

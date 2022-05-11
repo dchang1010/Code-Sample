@@ -3,18 +3,18 @@ import axios from 'axios';
 import ChopSentences from './ChopSentences.jsx';
 
 export default function Sample() {
-  const [input, setInput] = useState('');
+  const [sentence, setSentence] = useState('');
   const [list, setList] = useState([]);
 
   const handleChange = (e) => {
-    setInput({
+    setSentence({
       [e.target.name]: e.target.value
     }, console.log(e.target.value));
   }
 
   const handleSubmit = () => {
     let inputSentence = {
-      input: input.input
+      input: sentence.input
     };
     axios.post('/api/test', inputSentence)
       .catch((err) => console.error(err));
@@ -34,6 +34,7 @@ export default function Sample() {
 
   return (
     <div>
+      <img class="resize" src="Lyft-Logo.png"/>
       <h1>Every 3rd Letter</h1>
       <form onSubmit={handleSubmit}>
         <label> Type Sentence
@@ -41,8 +42,8 @@ export default function Sample() {
         </label>
         <button>Chop Sentence</button>
       </form>
-      <ul>
-        {/* <ChopSentences sentence={sentence}/> */}
+      <ul className="sentences">
+        <ChopSentences list={list}/>
       </ul>
     </div>
   )

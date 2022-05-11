@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-// import ChopSentencesEntry from './ChopSentencesEntry.jsx'
+import ChopSentencesEntry from './ChopSentencesEntry.jsx'
 
-export default function ChopSentences({ sentence }) {
+export default function ChopSentences({ list }) {
   return (
     <div>
-      {sentence.map((words, index) => {
-        <ChopSentencesEntry words={sentence} key={index}/>
-      })}
+      {list.map((sentence, index) => (
+        <ChopSentencesEntry sentence={sentence} key={index}/>
+      ))}
     </div>
   )
 }

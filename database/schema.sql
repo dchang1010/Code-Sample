@@ -9,4 +9,4 @@ CREATE TABLE sentences (
   sentence VARCHAR(500)
 );
 
-INSERT INTO sentences (sentence) VALUE ('muydv');
+INSERT INTO sentences (sentence) VALUE ('iamyourlyftdriver');

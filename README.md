@@ -10,6 +10,9 @@ npm start
 npm run react-dev
 ```
 
+After starting the server, go to your browser and go to:
+localhost:3000
+
 To set up the mySQL database, type the following command into your terminal
 ```
 mysql -u <USER> < schema.sql
